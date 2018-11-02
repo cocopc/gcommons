@@ -42,7 +42,7 @@ type Level int
 func (l Level) String() string { return levels[l] }
 func (l Level) Color() color   { return colors[l] }
 
-func (l Level) SetLevel(level string) Level{
+func SetLevel(level string) Level{
 	switch strings.ToUpper(level) {
 	case "INFO":
 		return LevelInfo
@@ -52,7 +52,7 @@ func (l Level) SetLevel(level string) Level{
 		return LevelWarning
 	case "Debug":
 		return LevelDebug
-	case "Crit":
+	case "CRIT":
 		return LevelCrit
 	default:
 		return LevelDebug
