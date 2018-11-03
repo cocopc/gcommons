@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"github.com/cocopc/gcommons/log"
 	"net"
 	"os"
 	"os/signal"
@@ -14,7 +13,6 @@ func WaitExitSign(){
 	c :=make(chan os.Signal,1)
 	// Interrupt SiGINT 都是 Ctrl-C
 	signal.Notify(c,os.Interrupt,os.Kill,syscall.SIGINT,syscall.SIGKILL,syscall.SIGTERM,syscall.SIGHUP)
-	l.Log("GET ExitSign !")
 	<-c
 }
 

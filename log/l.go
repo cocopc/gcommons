@@ -67,6 +67,11 @@ func init() {
 	Default.Depth = 4
 }
 
+func Define(name string, c color,level string){
+	Default.Colorize(name,c)
+	Default.Level=SetLevel(level)
+}
+
 // Logger instance
 type Logger struct {
 	mu           sync.Mutex
