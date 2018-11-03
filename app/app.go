@@ -11,6 +11,7 @@ var (
 )
 
 func init(){
+
 	log = l.New()
 	log.Prefix=log.Colorize("[gcommons]",l.Green)
 
