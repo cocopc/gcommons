@@ -7,6 +7,10 @@ import (
 )
 
 
+func init(){
+	l.Define("[gcommons]",l.Blue,"INFO")
+}
+
 // Run 运行一个应用，需要初始化函数，运行作业函数，清理资源函数，收到退出信号时清理资源
 func Run(appName string,initFunc,jobFunc,cleanupFunc func() error)  {
 	l.Printf("Initial [%s]", appName)
