@@ -42,7 +42,7 @@ const (
 )
 
 func header(funcName, file string, line int) string {
-	now := time.Now().UTC().Format("2006-01-02 15:04:05")
+	now := time.Now().Format("2006-01-02 15:04:05")
 	return Colorize(fmt.Sprintf("%s %s:%d ->", now, shortFile(file), line), Gray)
 }
 
